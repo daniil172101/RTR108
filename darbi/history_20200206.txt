@@ -1,0 +1,58 @@
+    1  VirtualBox --startvm XP
+    2  quartus
+    3  firefox &
+    4  git clone https://github.com/daniil172101/RTR108
+    5  cd RTR108/darbi/
+    6  ls -l
+    7  cat history_20200130.txt 
+    8  python -m http.server 8000 &
+    9  ps -aux | grep 8000
+   10  ls
+   11  mv index.html ../
+   12  ls -l
+   13  cd ..
+   14  ls -l
+   15  cd darbi/
+   16  kill 2296
+   17  ps -aux | grep 8000
+   18  python -m http.server 8000 &
+   19  cd ..
+   20  nano index.html 
+   21  mv index.html ./darbi/
+   22  python -m http.server 8000 &
+   23  cd darbi/
+   24  nano index.html 
+   25  ifconfig 
+   26  ifconfig
+   27  nano index.html 
+   28  ls -l ~/Downloads/
+   29  unzip ~/Downloads/ngrok-stable-linux-amd64.zip 
+   30  ls -l ~/Downloads/
+   31  ls -lt ~/Downloads/
+   32  unzip ~/Downloads/ngrok-stable-linux-amd64.zip 
+   33  ls -lt ~/Downloads/
+   34  ls -l ./
+   35  ps -aux | grep 8000
+   36  kill 2395
+   37  python -m http.server 8000 &
+   38  ps -aux | grep 8000
+   39  python -m http.server 8000 &
+   40  ps -aux | grep 8000
+   41  kill 2766
+   42  ps -aux | grep 8000
+   43  ls -l
+   44  rm ngrok 
+   45  ls -l
+   46  cd ..
+   47  ls -l
+   48  ./git-upload 20200206_13_55
+   49  ps -aux | grep 8000
+   50  pwd
+   51  cd ..
+   52  cd RTR108/
+   53  ls -l
+   54  cd ..
+   55  ls -l
+   56  cd RTR108/
+   57  cd darbi/
+   58  history > history_20200206.txt 
