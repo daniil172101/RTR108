@@ -1,3 +1,5 @@
+#This script compare integers in x and y variables (nested conditionals)
+
 a = input('Enter x\n')
 x = int(a)
 

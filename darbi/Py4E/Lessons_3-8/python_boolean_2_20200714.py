@@ -1,3 +1,5 @@
+#This script is example of short-circuit evaluation of logical expressions
+
 a = input('Enter x\n')
 x = int(a)
 

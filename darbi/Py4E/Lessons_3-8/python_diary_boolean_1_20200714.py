@@ -1,5 +1,5 @@
-print(type(True))
-print(type(False))
+print(type(True))           # Output: <class 'bool'>
+print(type(False))          # Output: <class 'bool'>
 x=3
 y=6
 print(x != y)               # x is not equal to y
