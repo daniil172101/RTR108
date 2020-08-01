@@ -1,4 +1,4 @@
-#This program counts number of elements in list of numbers and
+#This script counts number of elements in a list of numbers and
 #sum of all numbers in list
 count = 0
 total = 0

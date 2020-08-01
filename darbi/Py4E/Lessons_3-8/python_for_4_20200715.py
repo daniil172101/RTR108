@@ -1,3 +1,4 @@
+# This script finds the smallest value in a list or sequence
 smallest = None
 print('Before:', smallest)
 for itervar in [3, 41, 12, 9, 74, 15]:

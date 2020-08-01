@@ -1,3 +1,4 @@
+# This script finds the largest value in a list or sequence
 largest = None
 print('Before:', largest)
 for itervar in [3, 41, 12, 9, 74, 15]:
