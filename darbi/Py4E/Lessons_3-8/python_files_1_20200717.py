@@ -1,4 +1,4 @@
-#This program opens file 'mbox-short.txt' and counts lines in file
+#This script opens file 'mbox-short.txt' and counts lines in file
 
 fhand = open('mbox-short.txt')
 count = 0

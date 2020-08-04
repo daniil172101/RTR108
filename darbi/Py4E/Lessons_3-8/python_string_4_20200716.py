@@ -1,3 +1,5 @@
+# The following program counts the number of times
+# the letter “a” appears in a string
 word = 'banana'
 count = 0
 for letter in word:

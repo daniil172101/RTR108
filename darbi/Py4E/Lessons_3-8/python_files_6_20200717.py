@@ -1,3 +1,5 @@
+# This script reads file name from the user,
+# opens this file and counts a number of subject lines
 fname = input('Enter the file name: ')
 fhand = open(fname)
 count = 0

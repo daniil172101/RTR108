@@ -1,3 +1,6 @@
+# This script is a variation of previous script.
+# If user inputs wrong file name, program inform
+# that file cannot be opened
 fname = input('Enter the file name: ')
 try:
     fhand = open(fname)
