@@ -1,11 +1,11 @@
 # 5. nodarbība - Jupyter notebook
 
-	5. nodarbībā es iepazinos ar jupyter notebook un kā to izmantot 
+5. nodarbībā es iepazinos ar jupyter notebook un kā to izmantot 
 atskaišu noformēšanai.
 
 # Laboratorijas darbs - Teilora rindas
 
-	Sākumā es pārtaisīju manu C valodas 1. laboratorijas darba kodu 
+Sākumā es pārtaisīju manu C valodas 1. laboratorijas darba kodu 
 Python valodā. Pēc tam es noformēju atskaiti ar jupyter notebook palīdzību.
 Izmantojot **matplotlib**, es uzzīmēju funkcijas grafikus:
 
