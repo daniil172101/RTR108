@@ -14,5 +14,5 @@ Izmantojot **matplotlib**, es uzzīmēju funkcijas grafikus:
 
 Rezultātā es ieguvu sekojošus grafikus:
 
-![Funkcijas grafiki](https://github.com/daniil172101/RTR108/blob/master/darbi/ld_1/Figure_1.png)
+![Funkcijas grafiki](https://github.com/daniil172101/RTR108/blob/master/darbi/P05_ipynb/Figure_1.png)
 
