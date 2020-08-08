@@ -1,6 +1,6 @@
 # 7. nodarbība - GUI
 
-Šajā nodarbība es izmēģināju vienu no GUI veidošanas piemēriem un 
+Šajā nodarbībā es izmēģināju vienu no GUI veidošanas piemēriem un 
 izveidoju kalkulatoru izmantojot PyQt. Pēc tam es nedaudz izmainīju kodu.
 
 ## PyQt kalkulators
