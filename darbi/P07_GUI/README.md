@@ -13,15 +13,18 @@ Izveidots kalkulators izskatās šādi:
 Pēc tam es sāku izmainīt kodu. Sākumā es izmainīju kalkulatora izmēru:
 
 Pirms izmaiņam:
+
 	self.setFixedSize(235, 235)
 
 Pēc izmaiņam:
+
 	self.setFixedSize(250, 370)
 
 
 Pēc tam es izmainīju pogu novietojumus un izmērus: 
 
 Pirms izmaiņam:
+
 	buttons = {'7': (0, 0),
                    '8': (0, 1),
                    '9': (0, 2),
@@ -77,9 +80,11 @@ Pēc izmaiņam:
 Beigās es izmainīju displeja izmēru:
 
 Pirms izmaiņam:
+
 	self.display.setFixedHeight(35)
 
 Pēc izmaiņam:
+
 	self.display.setFixedHeight(40)
 
 Modiicēts kalkulators izskatās šādi:
