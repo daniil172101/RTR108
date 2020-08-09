@@ -1,0 +1,19 @@
+h1 {
+  text-align: center;
+  color: grey;
+  margin-left: 20px;
+}
+
+body {
+  background-color: lightgrey;
+}
+
+h2 {
+  color: slateblue;
+  text-align: left;
+}
+
+h3 {
+  color: cadetblue;
+  text-align: left;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML un CSS. Ngspice simulācijas apraksts.</title>
+<link rel="stylesheet" href="voltage_divider.css">
+<style>
+
+    table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+	}
+
+	td, th {
+  border: 3px double black;
+  text-align: center;
+  padding: 3px;
+	}
+ </style>
+
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script>MathJax.Hub.Config({ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}})</script> 
+</head>
+<body>
+
+<h1 style="color:#11468c">Sprieguma dalītaja shēmas modelēšana.</h1>
+<h2>Darba mērķis:</h2>
+<p>Iemacīties izmantot hiperteksta iezīmēšanas valodu (HTML) un stila lapas kaskadēšanas valodu (CSS).</p>
+<h2>Teorētiska daļa:</h2>
+
+<center><img src='' width=350 alt='Izmantotas shēmas bilde'></center>
+
+<p>Dota sprieguma dalītāja shēma ar sekojošiem elementu vērtībām:<br>$$U_{in} = {13.8 V}$$$$R_1 = {4 Ω}$$$$R_2 = {9 Ω}$$<br> Sprieguma uz R2 aprēķinu formula:<br></p>
+$$ U_{R_2} = {U_{in} \cdot R_2 \over R_1 + R_2} = {13.8 \cdot 9 \over 13} = {9.554 V},$$</p>
+<p>kur<br>Uin - ieejas spriegums,<br>UR2 - spriegums uz rezistora R2,<br>R1 - pirma rezistora vērtība,<br>R2 - otra rezistora vērtība.</p>
+
+
+<h2>Eksperimentāla daļa:</h2>
+<h3>Shēmas izveidošana ar gschem</h3>
+<p>Sākumā es izveidoju sprieguma dalītāja shēmu ar gschem palīdzību. Es ievadīju komandrindā sekojošu komandu:<center><strong>gschem voltage_divider.sch</strong></center></p>
+<p>Pēc tam paradījās sekojošais logs:</p>
+
+<center><img src='' width=350 alt='Gschem logs'></center>
+
+<p> Ar <b>”Add component”</b> palīdzību, es ievietoju komponentes. Piemēram, kā es ievietoju rezistoru R1:</p>
+
+<center><img src='' width=350 alt='"Add component" logs'></center>
+
+<p>Pēc tam savienoju visus elementus ar vadiem, ievietoju zemi un katram komponentam norādīju vērtības, pievienojot <b>”Value”</b> vērtību katram elementam.
+Gatavas shēmas variants izskatās šādi:</p>
+
+<center><img src='https://github.com/Duz132/RTR108/blob/master/P10_P11_LaTeX/RTR108/pictures/gschem1.png?raw=true' width=350 alt='GSchem gatava shēma'></center>
+
+<h3>Shēmas savienojuma saraksta iegūšana ar gnetlist</h3>
+
+<p>Pēc shēmas izveidošanas ar <b>gschem</b>, es izveidoju shēmas savienojumu sarakstu ar <b>gnetlist</b> palīdzību. Šīs fails ir vajadzīgs, lai veiktu shēmas simulāciju ar <b>ngspice</b>. 
+Fails satur elementu vērtības un elementu savienojuma sarakstu. Lai to izveidot, es ievadīju komandrindā komandu: <center><strong>gnetlist -g spice -o voltage_divider.net voltage_divider.sch </strong></center></p> 
+<p>Pēc komandas izpildīšanas paradījas fails <i>voltage_divider.net</i> ar sekojošu saturu: </p>
+
+<center><img src='' width=350 alt='netlist faila saturs'></center>
+
+<h3>Shēmas simulācija ar ngspice</h3>
+<p>Pēc savienojuma saraksta iegūšanas, mēs varam veikt shēmas simulāciju. Lai to darītu,ir jāizdara sekojošus soļus:</p>
+
+<ol>
+
+<li>Pirmkārt, es uzrakstīju komandrindā <b>ngspice</b>. Rezultāts ir sekojošs:</li>
+
+<center><img src='' width=350 alt='Ngspice'></center>
+
+<li>Otrkārt,es uzrakstiju komandu <b>source voltage_divider.net</b>. Tas ir vajadzīgs, lai noradīt avotu, no kurienes <b>ngspice</b> ņem datus simulēšanai.</li>
+
+<li>Treškārt, es uzrakstīju komandu <b>'tran solis beigas sākums'</b>, kura izpilda transient simulāciju dotai shēmai. Rezultāta man sanāca: </li>
+
+<center><img src='' width=350 alt='transient simulācija'></center>
+
+<li>Beigās, ir jāuzzīmē un jāizvada simulācijas rezultātu grafikus. Lai to darītu, ir jāizmanto komandu <b>'plot "mezgls"'</b>, kura zīmē grafikus, kā arī komandu <b>'hardcopy faila nosaukums ”mezgls”'</b>, kura izveidu failu ar izvadīto grafiku. Rezultāti ir paradīti zemāk:   </li>
+
+<center><img src='' width=350 alt='1.mezgla spriegums'></center>
+<center><img src='' width=350 alt='2. mezgla spriegums'></center>
+
+</ol>
+
+<h2>Rezultātu analīze un secinājumi</h2>
+<center>
+<table style="width:50%">
+	<tr>
+    	<th></th>
+        <th>$$ U_{out}, $$ V </th>
+    </tr>
+    <tr>
+    	<td>Teorētiskie aprēķini</td>
+        <td>9.554</td>
+    </tr>
+    <tr>
+    	<td>Shēmas simulācija</td>
+        <td>9.554</td>
+    </tr>
+</table>
+</center>
+
+<p>Salīdzinot teorētisko aprēķinu rezultātus ar ngspice simulācijas rezultātiem, ir redzams, ka rezultāti sakrīt. Tāpēc es secinu, ka sprieguma dalītāja simulācija,
+kura bija veikta ar ngspice, ir pareizi izpildīta.</p>
+</body>
+</html> 
