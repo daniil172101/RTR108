@@ -28,7 +28,7 @@
 <p>Iemacīties izmantot hiperteksta iezīmēšanas valodu (HTML) un stila lapas kaskadēšanas valodu (CSS).</p>
 <h2>Teorētiska daļa:</h2>
 
-<center><img src='https://github.com/daniil172101/RTR108/blob/master/darbi/P12_HTML_and_CSS/shema_1.png' width=350 alt='Izmantotas shēmas bilde'></center>
+<center><img src='https://github.com/daniil172101/RTR108/blob/master/darbi/P12_HTML_and_CSS/shema_1.png?raw=true' width=350 alt='Izmantotas shēmas bilde'></center>
 
 <p>Dota sprieguma dalītāja shēma ar sekojošiem elementu vērtībām:<br>$$U_{in} = {13.8 V}$$$$R_1 = {4 Ω}$$$$R_2 = {9 Ω}$$<br> Sprieguma uz R2 aprēķinu formula:<br></p>
 $$ U_{R_2} = {U_{in} \cdot R_2 \over R_1 + R_2} = {13.8 \cdot 9 \over 13} = {9.554 V},$$</p>
@@ -40,16 +40,16 @@ $$ U_{R_2} = {U_{in} \cdot R_2 \over R_1 + R_2} = {13.8 \cdot 9 \over 13} = {9.5
 <p>Sākumā es izveidoju sprieguma dalītāja shēmu ar gschem palīdzību. Es ievadīju komandrindā sekojošu komandu:<center><strong>gschem voltage_divider.sch</strong></center></p>
 <p>Pēc tam paradījās sekojošais logs:</p>
 
-<center><img src='https://github.com/daniil172101/RTR108/blob/master/darbi/P12_HTML_and_CSS/ngspice_1.png' width=350 alt='Gschem logs'></center>
+<center><img src='https://github.com/daniil172101/RTR108/blob/master/darbi/P12_HTML_and_CSS/ngspice_1.png?raw=true' width=350 alt='Gschem logs'></center>
 
 <p> Ar <b>”Add component”</b> palīdzību, es ievietoju komponentes. Piemēram, kā es ievietoju rezistoru R1:</p>
 
-<center><img src='https://github.com/daniil172101/RTR108/blob/master/darbi/P12_HTML_and_CSS/ngspice_2.png' width=350 alt='"Add component" logs'></center>
+<center><img src='https://github.com/daniil172101/RTR108/blob/master/darbi/P12_HTML_and_CSS/ngspice_2.png?raw=true' width=350 alt='"Add component" logs'></center>
 
 <p>Pēc tam savienoju visus elementus ar vadiem, ievietoju zemi un katram komponentam norādīju vērtības, pievienojot <b>”Value”</b> vērtību katram elementam.
 Gatavas shēmas variants izskatās šādi:</p>
 
-<center><img src='https://github.com/daniil172101/RTR108/blob/master/darbi/P12_HTML_and_CSS/voltage_divider.png'' width=350 alt='Gschem gatava shēma'></center>
+<center><img src='https://github.com/daniil172101/RTR108/blob/master/darbi/P12_HTML_and_CSS/voltage_divider.png?raw=true' width=350 alt='Gschem gatava shēma'></center>
 
 <h3>Shēmas savienojuma saraksta iegūšana ar gnetlist</h3>
 
@@ -66,18 +66,18 @@ Fails satur elementu vērtības un elementu savienojuma sarakstu. Lai to izveido
 
 <li>Pirmkārt, es uzrakstīju komandrindā <b>ngspice</b>. Rezultāts ir sekojošs:</li>
 
-<center><img src='https://github.com/daniil172101/RTR108/blob/master/darbi/P12_HTML_and_CSS/ngspice_4.png' width=350 alt='Ngspice'></center>
+<center><img src='https://github.com/daniil172101/RTR108/blob/master/darbi/P12_HTML_and_CSS/ngspice_4.png?raw=true' width=350 alt='Ngspice'></center>
 
 <li>Otrkārt,es uzrakstiju komandu <b>source voltage_divider.net</b>. Tas ir vajadzīgs, lai noradīt avotu, no kurienes <b>ngspice</b> ņem datus simulēšanai.</li>
 
 <li>Treškārt, es uzrakstīju komandu <b>'tran solis beigas sākums'</b>, kura izpilda transient simulāciju dotai shēmai. Rezultāta man sanāca: </li>
 
-<center><img src='https://github.com/daniil172101/RTR108/blob/master/darbi/P12_HTML_and_CSS/ngspice_5.png' width=350 alt='transient simulācija'></center>
+<center><img src='https://github.com/daniil172101/RTR108/blob/master/darbi/P12_HTML_and_CSS/ngspice_5.png?raw=true' width=350 alt='transient simulācija'></center>
 
 <li>Beigās, ir jāuzzīmē un jāizvada simulācijas rezultātu grafikus. Lai to darītu, ir jāizmanto komandu <b>'plot "mezgls"'</b>, kura zīmē grafikus, kā arī komandu <b>'hardcopy faila nosaukums ”mezgls”'</b>, kura izveidu failu ar izvadīto grafiku. Rezultāti ir paradīti zemāk:   </li>
 
-<center><img src='https://github.com/daniil172101/RTR108/blob/master/darbi/P12_HTML_and_CSS/voltage_divider_Vnode_1.png' width=350 alt='1.mezgla spriegums'></center>
-<center><img src='https://github.com/daniil172101/RTR108/blob/master/darbi/P12_HTML_and_CSS/voltage_divider_Vnode_2.png'' width=350 alt='2. mezgla spriegums'></center>
+<center><img src='https://github.com/daniil172101/RTR108/blob/master/darbi/P12_HTML_and_CSS/voltage_divider_Vnode_1.png?raw=true' width=350 alt='1.mezgla spriegums'></center>
+<center><img src='https://github.com/daniil172101/RTR108/blob/master/darbi/P12_HTML_and_CSS/voltage_divider_Vnode_2.png?raw=true' width=350 alt='2. mezgla spriegums'></center>
 
 </ol>
 
