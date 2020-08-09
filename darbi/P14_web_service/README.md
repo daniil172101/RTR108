@@ -1,6 +1,6 @@
 # 14. nodarbība - Web service and ngrok
 
-Šajā nodarbībā es pameģināju palaist savu SimpleHTTP serveri. Lai to izdarītu, es ievadīju komandrindā sekojošu komandu:
+Šajā nodarbībā es pamēģināju palaist savu SimpleHTTP serveri. Lai to izdarītu, es ievadīju komandrindā sekojošu komandu:
 
 	python -m SimpleHTTPServer 8000
 
