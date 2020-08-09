@@ -1,4 +1,4 @@
-#12. nodarbība - HTML un CSS
+# 12. nodarbība - HTML un CSS
 
 12.nodarbībā es iepazinos ar HTML un CSS. Šajā darbā es izmantoju w3schools.com mājaslapu, lai uzzināt niepieciešamu informāciju par HTML un CSS. Šajā nodarbībā es izveidoju aprakstu spriegima dalītāja simulēšanai ar ngspice HTML valodā. Lai uzrakstītu matemātiskas izteiskmes, es izmantoju MathJax.
 CSS piemēri:
