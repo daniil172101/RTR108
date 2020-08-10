@@ -17,7 +17,7 @@ Pēc tam es palaidu savu jaunu projektu ar šādu komandu:
 
 	DEBUG=myapp:* npm start
 
-Projekta šablons izskatās šadi:
+Projekta šablons izskatās šādi:
 
 ![Projekta šablons](https://github.com/daniil172101/RTR108/blob/master/darbi/P15_frameworks/framework_2.png)
 
